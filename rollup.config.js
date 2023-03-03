@@ -2,6 +2,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
 import ts from "@wessberg/rollup-plugin-ts";
+import dts from 'rollup-plugin-dts'
 import pkg from './package.json';
 
 export default [{
@@ -40,4 +41,9 @@ export default [{
 		json(),
 		ts({ tsconfig: 'tsconfig.json' }),
 	],
+},{
+    // path to your declaration files root
+    input: './dist/dts/bundle.d.ts',
+    output: [{ file: 'dist/bundle.d.ts', format: 'es' }],
+    plugins: [dts()],
 }];
