@@ -17,9 +17,9 @@ class YearFormatTokenAssigner implements IAssigner {
 		this._map = new Map();
 
 		if (!format || format === 'default') {
-			this._map.set(/\d{2}/, 'YY');
-			this._map.set(/\d{4}/, 'YYYY');
-			this._map.set(/[+-]\d{6}/, 'YYYYYY');
+			this._map.set(/\d{2}/, 'yy');
+			this._map.set(/\d{4}/, 'yyyy');
+			this._map.set(/[+-]\d{6}/, 'yyyyyy');
 		} else {
 			this._map.set(/\d{2}/, '%y');
 			this._map.set(/\d{4}/, '%Y');

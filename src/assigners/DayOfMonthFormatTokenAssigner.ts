@@ -17,9 +17,9 @@ class DayOfMonthFormatTokenAssigner implements IAssigner {
 		this._map = new Map();
 
 		if (!format || format === 'default') {
-			this._map.set(/\d{1,2}/, 'D');
-			this._map.set(/\d{2}/, 'DD');
-			this._map.set(/\d{1,2}(?:st|nd|rd|th)/, 'Do');
+			this._map.set(/\d{1,2}/, 'd');
+			this._map.set(/\d{2}/, 'dd');
+			this._map.set(/\d{1,2}(?:st|nd|rd|th)/, 'do');
 		} else {
 			this._map.set(/\d{1,2}/, '%-e');
 			this._map.set(/\d{2}/, '%d');

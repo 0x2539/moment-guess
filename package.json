@@ -1,5 +1,5 @@
 {
-  "name": "moment-guess",
+  "name": "date-fns-guess",
   "version": "1.2.4-alexb.1",
   "description": "A utility package for guessing date's format",
   "homepage": "https://github.com/apoorv-mishra/moment-guess#readme",

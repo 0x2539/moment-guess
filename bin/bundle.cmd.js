@@ -575,9 +575,9 @@ class YearFormatTokenAssigner {
         this.format = format;
         this._map = new Map();
         if (!format || format === 'default') {
-            this._map.set(/\d{2}/, 'YY');
-            this._map.set(/\d{4}/, 'YYYY');
-            this._map.set(/[+-]\d{6}/, 'YYYYYY');
+            this._map.set(/\d{2}/, 'yy');
+            this._map.set(/\d{4}/, 'yyyy');
+            this._map.set(/[+-]\d{6}/, 'yyyyyy');
         }
         else {
             this._map.set(/\d{2}/, '%y');
@@ -637,9 +637,9 @@ class DayOfMonthFormatTokenAssigner {
         this.format = format;
         this._map = new Map();
         if (!format || format === 'default') {
-            this._map.set(/\d{1,2}/, 'D');
-            this._map.set(/\d{2}/, 'DD');
-            this._map.set(/\d{1,2}(?:st|nd|rd|th)/, 'Do');
+            this._map.set(/\d{1,2}/, 'd');
+            this._map.set(/\d{2}/, 'dd');
+            this._map.set(/\d{1,2}(?:st|nd|rd|th)/, 'do');
         }
         else {
             this._map.set(/\d{1,2}/, '%-e');
@@ -3025,7 +3025,7 @@ chalk.stderr.supportsColor = stderrColor;
 
 var source = chalk;
 
-var name = "moment-guess";
+var name = "date-fns-guess";
 var version = "1.2.4-alexb.1";
 var description = "A utility package for guessing date's format";
 var homepage = "https://github.com/apoorv-mishra/moment-guess#readme";
